@@ -48,7 +48,7 @@
 
 -Model izlazi sa dvije distribucije vjerojatnosti (start i end logits) koje označavaju početak i kraj odgovora unutar konteksta
 
-#BertTokenizer
+# BertTokenizer
 
 -BertTokenizer je dio Transformers biblioteke koji se koristi za tokenizaciju teksta tako da ga možete koristiti s modelima zasnovanim na BERT-u.
 
@@ -59,7 +59,7 @@
 
 -Ideja iza upotrebe tokenizacije riječi je smanjenje veličine rječnika što poboljšava performanse treninga. Razmotrite riječi, run, running, runner. Bez tokenizacije riječi, model mora nezavisno pohraniti i naučiti značenje sve tri riječi. Međutim, sa tokenizacijom riječi, svaka od tri riječi bi bila podijeljena na 'run' i srodni '##SUFFIX' (ako ima sufiksa - na primjer, "run", "##ning", "##ner ”). Sada će model naučiti kontekst riječi "trčati", a ostatak značenja će biti kodiran u sufiksu, koji bi se naučio iz drugih riječi sa sličnim sufiksima
 
-#CoQA
+# CoQA
 -CoQA(Conversational Question Answering) je skup podataka za konverzacijsko odgovaranje na pitanja koji je objavio Stanford NLP 2019. To je skup podataka velikih razmjera za izgradnju sistema za odgovor na konverzacijsko pitanje. Ovaj skup podataka ima za cilj da izmeri sposobnost mašina da razumeju tekst i odgovore na niz međusobno povezanih pitanja koja se pojavljuju u razgovoru. Jedinstvena karakteristika ovog skupa podataka je da se svaki razgovor prikuplja uparivanjem dvaju radnika da razgovaraju o odlomku u obliku pitanja i odgovora i stoga su pitanja konverzacijski.U ovom projektu se koristi  "story", "question" i "answer" iz JSON skupa podataka da formiramo naš okvir podataka
 
 
