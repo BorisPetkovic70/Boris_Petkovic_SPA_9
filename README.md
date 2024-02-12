@@ -19,6 +19,12 @@
 
 -Tensori: Osnovna struktura podataka u Torch-u su tensori, koji su slični NumPy array-ima, ali imaju dodatne funkcionalnosti prilagođene za rad sa GPU-om. Tensori omogućavaju efikasno izračunavanje na velikim skupovima podataka<br>
 
+-output.start_logits je tenzor koji sadrži niz brojeva. Svaki broj u tom nizu predstavlja "logit" za određeni položaj u sekvenci tokena. Logit je merilo za verovatnoću, a u ovom slučaju, može se tumačiti kao koliko model smatra da je odgovor počeo na svakom pojedinačnom položaju u sekvenci.Na primer, ako je sekvenci tokena dužine 10, output.start_logits će biti tenzor dužine 10, gde svaki element predstavlja logit za odgovarajući položaj u toj sekvenci.
+
+-Ako imamo niz [0.2, 0.5, 0.8, 0.3], gde su ovi brojevi rezultati izlaza modela, oni se tumače kao verovatnoće da odgovor počinje na određenom položaju u sekvenci. U ovom slučaju, indeks 2 (gde je vrednost 0.8) se uzima kao početak odgovora.
+
+Onda, koristeći torch.argmax(output.start_logits), dobijate indeks koji odgovara poziciji sa najvećom vrednošću, a to tumačite kao predviđeni početak odgovora.
+
 # Transformers:
 -Transformers je biblioteka otvorenog koda koja se fokusira na pružanje alata za rad sa modelima transformatora u oblasti obrade prirodnog jezika (NLP) i drugim sekvencijalnim podacima.<br>
 
