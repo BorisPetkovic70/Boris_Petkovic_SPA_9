@@ -45,6 +45,8 @@ Onda, koristeći torch.argmax(output.start_logits), dobijate indeks koji odgovar
 
 -BertForQuestionAnswering je vrsta prethodno treniranog (pretrained) modela. To znači da je model prethodno treniran na ogromnim skupovima podataka, obično na velikim količinama teksta, kako bi naučio reprezentacije riječi i konteksta
 
+-bert-large-uncased-whole-word-masking-finetuned-squad' znači da se koristi veliki (large) BERT model bez razlikovanja između velikih i malih slova (uncased), sa posebnim tretmanom celih reči (whole word masking), a da je dodatno fine-tjuniran na SQuAD zadatku
+
 
 -BERT se trenira na velikim količinama teksta koristeći zadatak samoproučavanja. Model pokušava predvidjeti izostavljene riječi u rečenicama, koristeći okolni kontekst
 
