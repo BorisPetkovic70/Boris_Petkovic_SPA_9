@@ -71,7 +71,7 @@ Onda, koristeći torch.argmax(output.start_logits), dobijate indeks koji odgovar
 -CoQA(Conversational Question Answering) je skup podataka za konverzacijsko odgovaranje na pitanja koji je objavio Stanford NLP 2019. To je skup podataka velikih razmjera za izgradnju sistema za odgovor na konverzacijsko pitanje. Ovaj skup podataka ima za cilj da izmeri sposobnost mašina da razumeju tekst i odgovore na niz međusobno povezanih pitanja koja se pojavljuju u razgovoru. Jedinstvena karakteristika ovog skupa podataka je da se svaki razgovor prikuplja uparivanjem dvaju radnika da razgovaraju o odlomku u obliku pitanja i odgovora i stoga su pitanja konverzacijski.U ovom projektu se koristi  "story", "question" i "answer" iz JSON skupa podataka da formiramo naš okvir podataka
 
 
-![Slika1](C:\Users\Boris\Desktop\JupiterNotebook\slika1.webp)
+![Slika1](C:\Users\Boris\Desktop\JupiterNotebook\slika1.jpg)
 
 
 
