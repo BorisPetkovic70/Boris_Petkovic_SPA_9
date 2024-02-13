@@ -1,6 +1,7 @@
 # Boris_Petkovic_SPA_9
 
-# Tema projekta:Kreirati model koji moze da odgovora na pitanja iz datog teksta ili ti QA(question answering) model
+# Zadatak projekta
+-Kreirati model koji moze da odgovora na pitanja iz datog teksta ili poznatiji kao Question Answering Model.
 
 # Biblioteke korištene u projektu: 
 
