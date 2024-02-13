@@ -63,9 +63,12 @@ Onda, koristeći torch.argmax(output.start_logits), dobijate indeks koji odgovar
 -Koristi tokenizaciju koja uključuje dodavanje posebnih tokena, kao što su [CLS] za označavanje početka sekvence i [SEP] za označavanje kraja sekvence. Osim toga, riječi se mogu razbijati na podriječi ("subwords") kako bi se omogućila bolja reprezentacija različitih dijelova riječi.
 
 -U BERT-u, rijetke riječi se raščlanjuju na podriječi/dijelove. Tokenizacija riječi koristi ## za razgraničenje tokena koji su podijeljeni.
+![trecaSlika](https://github.com/BorisPetkovic70/Boris_Petkovic_SPA_9/assets/133760465/e771753e-9a6c-4f3c-9394-ceb5323f781f)
 
 
 -Ideja iza upotrebe tokenizacije riječi je smanjenje veličine rječnika što poboljšava performanse treninga. Razmotrite riječi, run, running, runner. Bez tokenizacije riječi, model mora nezavisno pohraniti i naučiti značenje sve tri riječi. Međutim, sa tokenizacijom riječi, svaka od tri riječi bi bila podijeljena na 'run' i srodni '##SUFFIX' (ako ima sufiksa - na primjer, "run", "##ning", "##ner ”). Sada će model naučiti kontekst riječi "trčati", a ostatak značenja će biti kodiran u sufiksu, koji bi se naučio iz drugih riječi sa sličnim sufiksima
+
+
 
 # CoQA
 -CoQA(Conversational Question Answering) je skup podataka za konverzacijsko odgovaranje na pitanja koji je objavio Stanford NLP 2019. To je skup podataka velikih razmjera za izgradnju sistema za odgovor na konverzacijsko pitanje. Ovaj skup podataka ima za cilj da izmeri sposobnost mašina da razumeju tekst i odgovore na niz međusobno povezanih pitanja koja se pojavljuju u razgovoru. Jedinstvena karakteristika ovog skupa podataka je da se svaki razgovor prikuplja uparivanjem dvaju radnika da razgovaraju o odlomku u obliku pitanja i odgovora i stoga su pitanja konverzacijski.U ovom projektu se koristi  "story", "question" i "answer" iz JSON skupa podataka da formiramo naš okvir podataka
