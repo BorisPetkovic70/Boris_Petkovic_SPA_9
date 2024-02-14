@@ -2,7 +2,11 @@
 
 # Zadatak projekta
 -Kreirati model koji moze da odgovora na pitanja iz datog teksta ili poznatiji kao Question Answering Model.
+
+
 -Model može da prima tekst i pitanja na Engleskom jeziku.
+
+
 -Ukoliko primi pitanje na koje ne može pronaći odgovor, šalje se opšta poruka.
 
 # Biblioteke korištene u projektu: 
