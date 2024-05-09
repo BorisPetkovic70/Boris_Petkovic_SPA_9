@@ -88,10 +88,31 @@ Onda, koristeći torch.argmax(output.start_logits), dobijate indeks koji odgovar
 ![drugaSlika](https://github.com/BorisPetkovic70/Boris_Petkovic_SPA_9/assets/133760465/cfe6b294-e868-448f-974d-55ca02a6afdd)
 
 
+# Statistika tačnosti
+-U slijedecem dijelu koda je uredjena statistika tačnosti ovoga modela. Uzeto je nasumičan broj tekstova i pitanja, maksimalno 100, odnosno pokušala su se izbjeći pitanja koja se nadovezuju na prethodno pitanje kao što je npr. "and?". Ovaj model nema sposobnost da se nadovezuje na razgovor i da odgovara na takva pitanja kao i da/ne pitanja. 
 
 
+![codeStatistika](https://github.com/BorisPetkovic70/Boris_Petkovic_SPA_9/assets/133760465/31d65453-6762-4cb1-b3e0-f3bed68f3140)
 
 
+-Ono što je specifično korišćeno u ovom kodu jeste biblioteka "fuzzywuzzy" koja je davala procenat od 0 do 100 koliko su slicne rečenice, odnosno u mom slučaju, koliko su slični odgovori modela i odgovori navedeni u skupu podataka.Ako je procenat sličnosti bio preko 50% ili ako je jedan od tih odgovor bio sadržavao drugi odgovor, onda je broj tačnih odgovora modela se povećavao, npr.
+
+![primjer1](https://github.com/BorisPetkovic70/Boris_Petkovic_SPA_9/assets/133760465/29d71d00-b288-4db8-ab41-c260592b644e)
+
+![primjer2](https://github.com/BorisPetkovic70/Boris_Petkovic_SPA_9/assets/133760465/23c2f9c4-fb7a-45ca-a103-5775f85b563a)
+
+![primjer3](https://github.com/BorisPetkovic70/Boris_Petkovic_SPA_9/assets/133760465/9929b676-7131-4a5d-be36-1550c3774d9a)
+
+![primjer6](https://github.com/BorisPetkovic70/Boris_Petkovic_SPA_9/assets/133760465/10111075-ee8d-4a64-9702-3590034c1832)
+
+-Dok na primjer je bilo i ovakvih slučajeva, gdje je odgovor bio da/ne oblika i samim time nas model bi dao netačan odgovor jer nema tu sposobnost:
+
+![primjer7](https://github.com/BorisPetkovic70/Boris_Petkovic_SPA_9/assets/133760465/83e88504-aa8b-474b-8958-7f39bc88b9b3)
+
+-Procenat tačnosti kaže sledeće:
+![statistika1](https://github.com/BorisPetkovic70/Boris_Petkovic_SPA_9/assets/133760465/cce66c7c-7575-4ee2-af73-2e114d732cbe)
+
+-Uzimajući u obzir da je bilo pitanja za koje model nije uopšte namijenjen da odgovori, kao što su da/ne odgovori ili odgovori koji se ne mogu izvući iz teksta direktno već je potrebna veća inteligencija i razmišljanje da se zaključi odgovor, ovaj model je uradio vrlo dobar posao.
 
 
 
